@@ -28,6 +28,7 @@ public class ProductManager {
             }
         }
         return result;
+
     }
 
     public boolean matches(Product product, String search) {

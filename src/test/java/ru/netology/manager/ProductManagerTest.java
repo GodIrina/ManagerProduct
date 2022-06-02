@@ -14,7 +14,7 @@ class ProductManagerTest {
     Book firstBook = new Book(1, "Гарри Поттер и филосовский камень", 2000, "Джоан Роулинг");
     Book secondBook = new Book(2, "Финансист", 370, "Теодор Драйзер");
     Book thirdBook = new Book(3, "Скотный двор", 320, "Джордж Оруэлл");
-    Book fourthBook = new Book(4, "Норвежский лес", 546, "Хвруки Мураками");
+    Book fourthBook = new Book(4, "Норвежский лес", 546, "Харуки Мураками");
     Smartphone firstSmartphone = new Smartphone(5, "Samsung", 5000, "Japan");
     Smartphone secondSmartphone = new Smartphone(6, "Nokia", 2000, "Korea");
     Smartphone thirdSmartphone = new Smartphone(7, "Xiaomi", 7000, "China");
@@ -61,8 +61,8 @@ class ProductManagerTest {
         productManager.add(secondSmartphone);
         productManager.add(thirdSmartphone);
 
-        Product[] actual = productManager.searchBy("Скотный двор");
-        Product[] expected = new Product[]{thirdBook, fourthBook};
+        Product[] actual = productManager.searchBy ("Норвежский лес");
+        Product[] expected = new Product[]{fourthBook};
         assertArrayEquals(expected, actual);
     }
 
