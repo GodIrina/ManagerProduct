@@ -1,4 +1,5 @@
 package ru.netology.repository;
+
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.Book;
 import ru.netology.domain.NotFoundException;
@@ -47,7 +48,7 @@ class ProductRepositoryTest {
         repository.save(thirdSmartphone);
 
 
-        Product[] expected = new Product[] { firstBook, secondBook, thirdBook, fourthBook, firstSmartphone, secondSmartphone,thirdSmartphone };
+        Product[] expected = new Product[]{firstBook, secondBook, thirdBook, fourthBook, firstSmartphone, secondSmartphone, thirdSmartphone};
         Product[] actual = repository.findAll();
         assertArrayEquals(expected, actual);
     }
@@ -62,7 +63,7 @@ class ProductRepositoryTest {
 
         repository.removeById(id);
 
-        Product[] expected = new Product[] { firstBook, secondBook, thirdBook };
+        Product[] expected = new Product[]{firstBook, secondBook, thirdBook};
         Product[] actual = repository.findAll();
         assertArrayEquals(expected, actual);
     }
@@ -79,7 +80,7 @@ class ProductRepositoryTest {
 
         repository.removeById(6);
 
-        Product[] expected = new Product[] { firstBook, secondBook, thirdBook, fourthBook, firstSmartphone, thirdSmartphone };
+        Product[] expected = new Product[]{firstBook, secondBook, thirdBook, fourthBook, firstSmartphone, thirdSmartphone};
         Product[] actual = repository.findAll();
         assertArrayEquals(expected, actual);
     }
